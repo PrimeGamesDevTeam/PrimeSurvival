@@ -1,0 +1,9 @@
+name: Primessurvival
+version: '${project.version}'
+main: net.primegames.Primessurvival
+api-version: 1.17
+prefix: primessurvival
+depend: [ primescore ]
+authors: [ nasir_idrishi ]
+description: Primegames survival plugin
+website: https://primegames.net
