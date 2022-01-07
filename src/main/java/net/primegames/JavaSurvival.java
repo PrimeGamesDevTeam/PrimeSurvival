@@ -14,21 +14,25 @@ public final class JavaSurvival extends JavaPlugin {
     private static JavaSurvival instance;
     @Getter
     private LuckPerms luckPerms;
+    @Getter
+    private JavaCore core;
 
     @Override
     public void onLoad() {
         instance = this;
+        core = new JavaCore(this);
     }
 
     @Override
     public void onEnable() {
+        core.onEnable();
         luckPerms = LuckPermsProvider.get();
-
         registerEvents();
     }
 
     @Override
     public void onDisable() {
+        core.onDisable();
         // Plugin shutdown logic
     }
 

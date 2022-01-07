@@ -16,6 +16,7 @@
     <url>https://primegames.net</url>
 
     <build>
+        <finalName>${project.name}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -72,7 +73,8 @@
         <dependency>
             <groupId>net.primegames</groupId>
             <artifactId>javacore</artifactId>
-            <version>3.0.5</version>
+            <version>1.1.01-SNAPSHOT</version>
+            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>net.luckperms</groupId>

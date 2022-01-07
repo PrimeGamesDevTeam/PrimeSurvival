@@ -1,10 +1,9 @@
 name: Primessurvival
 version: '${project.version}'
-main: net.primegames.Primessurvival
+main: net.primegames.JavaSurvival
 api-version: 1.17
-prefix: primessurvival
+prefix: JavaSurvival
 depend:
-  - primescore
   - LuckPerms
 authors: [ nasir_idrishi ]
 description: Primegames survival plugin
