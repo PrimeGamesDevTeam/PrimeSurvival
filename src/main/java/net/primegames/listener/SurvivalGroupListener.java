@@ -1,7 +1,7 @@
 package net.primegames.listener;
 
-import net.primegames.core.event.player.CorePlayerLoadedEvent;
-import net.primegames.survival.group.SurvivalGroup;
+import net.primegames.event.player.CorePlayerLoadedEvent;
+import net.primegames.group.SurvivalGroup;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 

@@ -6,9 +6,10 @@ import net.luckperms.api.model.data.DataMutateResult;
 import net.luckperms.api.model.group.Group;
 import net.luckperms.api.model.user.User;
 import net.luckperms.api.node.types.InheritanceNode;
-import net.primegames.core.PrimesCore;
-import net.primegames.core.groups.GroupTier;
-import net.primegames.core.utils.CoreLogger;
+import net.primegames.JavaCore;
+import net.primegames.JavaSurvival;
+import net.primegames.groups.GroupTier;
+import net.primegames.utils.CoreLogger;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -45,7 +46,7 @@ public enum SurvivalGroup {
     SurvivalGroup(String name, GroupTier groupTier) {
         this.tier = groupTier;
         this.name = name;
-        Group group = PrimesCore.getInstance().getLuckPerms().getGroupManager().getGroup(name);
+        Group group = JavaCore.getInstance().getLuckPerms().getGroupManager().getGroup(name);
         if (group != null) {
             this.group = group;
         } else {
@@ -99,7 +100,7 @@ public enum SurvivalGroup {
     public static void addGroupsFromTiers(@NonNull Player player, List<@NonNull GroupTier> tiers) {
         List<SurvivalGroup> survivalGroups = fromTiers(tiers);
         CoreLogger.info(ChatColor.YELLOW + "Loading survival groups for " + player.getName());
-        LuckPerms luckPerms = PrimesCore.getInstance().getLuckPerms();
+        LuckPerms luckPerms = JavaSurvival.getInstance().getLuckPerms();
         User user = luckPerms.getUserManager().getUser(player.getUniqueId());
         if (user != null) {
             user.getNodes().clear();
