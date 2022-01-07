@@ -3,7 +3,9 @@ version: '${project.version}'
 main: net.primegames.Primessurvival
 api-version: 1.17
 prefix: primessurvival
-depend: [ primescore ]
+depend:
+  - primescore
+  - LuckPerms
 authors: [ nasir_idrishi ]
 description: Primegames survival plugin
 website: https://primegames.net

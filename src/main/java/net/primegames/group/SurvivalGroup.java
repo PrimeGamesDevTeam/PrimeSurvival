@@ -46,7 +46,7 @@ public enum SurvivalGroup {
     SurvivalGroup(String name, GroupTier groupTier) {
         this.tier = groupTier;
         this.name = name;
-        Group group = JavaCore.getInstance().getLuckPerms().getGroupManager().getGroup(name);
+        Group group = JavaSurvival.getInstance().getLuckPerms().getGroupManager().getGroup(name);
         if (group != null) {
             this.group = group;
         } else {
