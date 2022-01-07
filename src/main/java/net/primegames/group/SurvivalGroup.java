@@ -9,7 +9,7 @@ import net.luckperms.api.node.types.InheritanceNode;
 import net.primegames.JavaCore;
 import net.primegames.JavaSurvival;
 import net.primegames.groups.GroupTier;
-import net.primegames.utils.CoreLogger;
+import net.primegames.utils.LoggerUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.checkerframework.checker.nullness.qual.NonNull;
@@ -99,7 +99,7 @@ public enum SurvivalGroup {
 
     public static void addGroupsFromTiers(@NonNull Player player, List<@NonNull GroupTier> tiers) {
         List<SurvivalGroup> survivalGroups = fromTiers(tiers);
-        CoreLogger.info(ChatColor.YELLOW + "Loading survival groups for " + player.getName());
+        LoggerUtils.info(ChatColor.YELLOW + "Loading survival groups for " + player.getName());
         LuckPerms luckPerms = JavaSurvival.getInstance().getLuckPerms();
         User user = luckPerms.getUserManager().getUser(player.getUniqueId());
         if (user != null) {
@@ -107,20 +107,20 @@ public enum SurvivalGroup {
             for (SurvivalGroup survivalGroup : survivalGroups) {
                 InheritanceNode node = InheritanceNode.builder(survivalGroup.getGroup().getName()).value(true).build();
                 if (user.data().add(node) == DataMutateResult.SUCCESS) {
-                    CoreLogger.debug("Added survival group " + survivalGroup.getGroup().getName() + " to " + player.getName());
+                    LoggerUtils.debug("Added survival group " + survivalGroup.getGroup().getName() + " to " + player.getName());
                 } else {
-                    CoreLogger.error("Failed to add survival group " + survivalGroup.getGroup().getName() + " to " + player.getName());
+                    LoggerUtils.error("Failed to add survival group " + survivalGroup.getGroup().getName() + " to " + player.getName());
                 }
             }
             SurvivalGroup finalGroup = SurvivalGroup.getHighestPriority(survivalGroups);
             if (user.setPrimaryGroup(finalGroup.getGroup().getName()) == DataMutateResult.SUCCESS) {
-                CoreLogger.success("Set " + player.getName() + "'s primary group to " + finalGroup.getGroup().getName());
+                LoggerUtils.success("Set " + player.getName() + "'s primary group to " + finalGroup.getGroup().getName());
             } else {
-                CoreLogger.error("Failed to set " + player.getName() + "'s primary group to " + finalGroup.getGroup().getName());
+                LoggerUtils.error("Failed to set " + player.getName() + "'s primary group to " + finalGroup.getGroup().getName());
             }
             luckPerms.getUserManager().saveUser(user);
         } else {
-            CoreLogger.error("Failed to get LuckPerms User for " + player.getName());
+            LoggerUtils.error("Failed to get LuckPerms User for " + player.getName());
         }
     }
 

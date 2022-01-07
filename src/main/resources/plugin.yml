@@ -1,4 +1,4 @@
-name: Primessurvival
+name: JavaSurvival
 version: '${project.version}'
 main: net.primegames.JavaSurvival
 api-version: 1.17

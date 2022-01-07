@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>net.primegames</groupId>
-    <artifactId>java_survival</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>javasurvival</artifactId>
+    <version>1.0.01-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>JavaSurvival</name>
     <description>Primegames survival plugin</description>
@@ -15,6 +15,13 @@
     </properties>
     <url>https://primegames.net</url>
 
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub PrimeGamesDevTeam Apache Maven Packages</name>
+            <url>https://maven.pkg.github.com/PrimeGamesDevTeam/JavaSurvival</url>
+        </repository>
+    </distributionManagement>
     <build>
         <finalName>${project.name}</finalName>
         <plugins>
@@ -73,7 +80,7 @@
         <dependency>
             <groupId>net.primegames</groupId>
             <artifactId>javacore</artifactId>
-            <version>1.1.01-SNAPSHOT</version>
+            <version>1.1.02-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
