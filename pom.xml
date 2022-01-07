@@ -80,7 +80,7 @@
         <dependency>
             <groupId>net.primegames</groupId>
             <artifactId>javacore</artifactId>
-            <version>1.1.02-SNAPSHOT</version>
+            <version>1.1.04-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
