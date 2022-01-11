@@ -78,12 +78,6 @@
             <scope>provided</scope>
         </dependency>
         <dependency>
-            <groupId>net.primegames</groupId>
-            <artifactId>javacore</artifactId>
-            <version>1.1.04-SNAPSHOT</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
             <groupId>net.luckperms</groupId>
             <artifactId>api</artifactId>
             <version>5.3</version>
@@ -93,6 +87,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.22</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>net.primegames</groupId>
+            <artifactId>primegames</artifactId>
+            <version>1.2.25-SNAPSHOT</version>
             <scope>compile</scope>
         </dependency>
         <dependency>
