@@ -1,10 +1,11 @@
-name: JavaSurvival
+name: PrimeSurvival
 version: '${project.version}'
-main: net.primegames.JavaSurvival
+main: net.primegames.PrimeSurvival
 api-version: 1.17
 prefix: JavaSurvival
 depend:
   - LuckPerms
+  - MineTinker
 authors: [ nasir_idrishi ]
 description: Primegames survival plugin
 website: https://primegames.net
