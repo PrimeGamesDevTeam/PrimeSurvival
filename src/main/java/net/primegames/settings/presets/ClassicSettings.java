@@ -26,8 +26,8 @@ public class ClassicSettings extends Settings {
     public List<VoteSite> getVoteSites() {
         return List.of(
                 VoteSite.Builder.create()
-                .name("Minecraft PE Server Link")
-                .voteLink("vote.primegames.net")
+                .name("Minecraft PE Server List")
+                .voteLink("vote.primegames.in")
                 .checkUrl("https://minecraftpocket-servers.com/api/?object=votes&element=claim&key={ServerKey}&username={Username}")
                 .claimUrl("https://minecraftpocket-servers.com/api/?action=post&object=votes&element=claim&key={ServerKey}&username={Username}")
                 .checkTopUrl("https://minecraftpocket-servers.com/api/?object=servers&element=voters&key={ServerKey}&month={Period}&format=json")
