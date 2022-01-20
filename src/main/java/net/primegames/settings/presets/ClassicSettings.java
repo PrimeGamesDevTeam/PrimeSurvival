@@ -26,11 +26,12 @@ public class ClassicSettings extends Settings {
     public List<VoteSite> getVoteSites() {
         return List.of(
                 VoteSite.Builder.create()
-                .name("Minecraft PE Server List")
-                .voteLink("vote.primegames.in")
-                .checkUrl("https://minecraftpocket-servers.com/api/?object=votes&element=claim&key={ServerKey}&username={Username}")
-                .claimUrl("https://minecraftpocket-servers.com/api/?action=post&object=votes&element=claim&key={ServerKey}&username={Username}")
-                .checkTopUrl("https://minecraftpocket-servers.com/api/?object=servers&element=voters&key={ServerKey}&month={Period}&format=json")
-                .build());
+                        .name("Minecraft PE Server List")
+                        .voteLink("vote.primegames.in")
+                        .checkUrl("https://minecraftpocket-servers.com/api/?object=votes&element=claim&key={ServerKey}&username={Username}")
+                        .claimUrl("https://minecraftpocket-servers.com/api/?action=post&object=votes&element=claim&key={ServerKey}&username={Username}")
+                        .checkTopUrl("https://minecraftpocket-servers.com/api/?object=servers&element=voters&key={ServerKey}&month={Period}&format=json")
+                        .apiKey("J6aZcNY4vZbCNf5LufxENIo6jEU5qZlSK2")
+                        .build());
     }
 }
