@@ -30,7 +30,7 @@ public class ClassicSettings extends Settings {
                 .voteLink("vote.primegames.net")
                 .checkUrl("https://minecraftpocket-servers.com/api/?object=votes&element=claim&key={ServerKey}&username={Username}")
                 .claimUrl("https://minecraftpocket-servers.com/api/?action=post&object=votes&element=claim&key={ServerKey}&username={Username}")
-                .checkTopUrl("https://minecraftpocket-servers.com/api/?object=servers&element=voters&key={ServerKey}&month={Period}&format={Format}")
+                .checkTopUrl("https://minecraftpocket-servers.com/api/?object=servers&element=voters&key={ServerKey}&month={Period}&format=json")
                 .build());
     }
 }
