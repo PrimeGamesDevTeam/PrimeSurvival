@@ -13,10 +13,10 @@ public class ClassicSettings extends Settings {
 
     @Override
     public VoteReward getVoteReward() {
-        return voteClaimEvent -> {
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "votereward " + voteClaimEvent.getPlayer().getName());
-            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "cr give to " + voteClaimEvent.getPlayer().getName() + " vote 1");
-            Component component = Component.text("§a" + voteClaimEvent.getPlayer().getName() + " §7has claimed their vote reward!");
+        return player -> {
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "votereward " + player.getName());
+            Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "cr give to " + player.getName() + " vote 1");
+            Component component = Component.text("§a" + player.getName() + " §7has claimed their vote reward!");
             Bukkit.broadcast(component);
             return true;
         };
