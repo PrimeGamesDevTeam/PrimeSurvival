@@ -3,8 +3,6 @@ package net.primegames;
 import lombok.Getter;
 import net.luckperms.api.LuckPerms;
 import net.luckperms.api.LuckPermsProvider;
-import net.primegames.data.VoteSite;
-import net.primegames.listener.MineTickerListener;
 import net.primegames.listener.SurvivalGroupListener;
 import net.primegames.plugin.PrimePlugin;
 import net.primegames.settings.Settings;
@@ -38,7 +36,6 @@ public final class PrimeSurvival extends PrimePlugin {
 
     private void registerEvents() {
         PluginManager manager = getServer().getPluginManager();
-        manager.registerEvents(new MineTickerListener(), this);
         manager.registerEvents(new SurvivalGroupListener(), this);
     }
 }

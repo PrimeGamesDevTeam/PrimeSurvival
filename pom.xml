@@ -96,13 +96,6 @@
             <scope>compile</scope>
         </dependency>
         <dependency>
-            <groupId>de.flo56958.minetinker</groupId>
-            <artifactId>MineTinker</artifactId>
-            <version>1.7.2</version>
-            <scope>system</scope>
-            <systemPath>${project.basedir}/src/main/resources/repos/MineTinker.jar</systemPath>
-        </dependency>
-        <dependency>
             <groupId>net.primegames</groupId>
             <artifactId>primevote</artifactId>
             <version>1.2-SNAPSHOT</version>
